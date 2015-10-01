@@ -1,0 +1,54 @@
+/* General settings */
+div.checker span {
+  background-image: url("../img/checkbox.png");
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased; }
+
+/* Checkbox */
+div.checker {
+  position: relative; }
+  div.checker, div.checker span, div.checker input {
+      cursor: pointer;
+      width: 10px;
+    height: 10px; }
+  div.checker span {
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    text-align: center;
+    background-position: 0 0; }
+    div.checker span.checked {
+      background-position: -10px 0; }
+  div.checker input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    border: none;
+    background: none;
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    zoom: 1; }
+  div.checker.active span {
+    background-position: 0 0; }
+    div.checker.active span.checked {
+      background-position: -10px 0; }
+  div.checker.hover span, div.checker.focus span {
+    background-position: 0 0; }
+    div.checker.hover span.checked, div.checker.focus span.checked {
+      background-position: -10px 0; }
+  div.checker.hover.active span, div.checker.focus.active span {
+    background-position: 0 0; }
+    div.checker.hover.active span.checked, div.checker.focus.active span.checked {
+      background-position: -10px 0; }
+  div.checker.disabled, div.checker.disabled.active {
+    background-position: 0 0; }
+    div.checker.disabled span.checked, div.checker.disabled.active span.checked {
+      background-position: -10px 0; }
+
+
+/* PRESENTATION */
+/* Checker */
+div.checker {
+  margin-right: 5px; }

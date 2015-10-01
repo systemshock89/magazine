@@ -1,0 +1,1103 @@
+/*version: 0.0.2*/
+/*---------STANDART STYLES*------------*/
+html, body {
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    font-family:tahoma;
+    font-size:12px;
+    color:#000;
+}
+
+a{
+    color:#000;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+img{
+    border: none;
+}
+
+input{
+    font-family:tahoma;
+    font-size:12px;
+    padding: 5px 10px;
+}
+
+textarea{
+    font-family:tahoma;
+    font-size:12px;
+    padding: 5px 10px;
+    height: 70px;
+    overflow: auto;
+}
+
+select{
+    cursor: pointer;
+}
+
+label{
+    cursor: pointer;
+}
+
+#overflow_div {
+    position: relative;
+    width: 100%;
+    min-width: 1000px;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.content-wraper {
+    position: relative;
+}
+
+.content {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.content-hidden{
+    width: 1000px;
+    overflow: hidden;
+}
+
+.viewport{
+    position: relative;
+    overflow: hidden;
+}
+
+.overflower {
+    width: 105%;
+}
+
+.overflower.rightfloating {
+    margin-left: -5%;
+}
+
+.floatblock {
+    float: right;
+    padding: 20px 0 40px 0;
+}
+
+.floatblock.left {
+    width: 250px;
+}
+
+.floatblock.center-min {
+    width: 500px;
+}
+
+.floatblock.center-middle {
+    width: 750px;
+}
+
+.floatblock.center-full {
+    width: 1000px;
+}
+
+.floatblock.right {
+    width: 250px;
+    display: none;
+}
+
+.floatblock.padding-right{
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    height: 1px;
+}
+
+.left .block {
+    margin: 0 20px 40px 10px;
+}
+
+.right .block {
+    margin: 0 10px 40px 20px;
+}
+
+.center-min .block, .center-middle .block, .center-full .block {
+    margin-bottom: 30px;
+}
+
+.clear{
+    clear: both;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1, .h1{
+    font-size: 2em;
+    margin: 0.67em;
+    font-weight: bold;
+}
+
+h2, .h2{
+    font-size: 1.5em;
+    margin: 0.83em;
+    font-weight: bold;
+}
+
+h3, .h3{
+    font-size: 1.17em;
+    margin: 1em;
+    font-weight: bold;
+}
+
+h4,.h4{
+    margin: 1.33em;
+    font-weight: bold;
+}
+
+.left h2, .left .h2 {
+    margin: 0 0 15px 0;
+}
+
+.left > h2, .left > .h2 {
+    margin: 0 0 15px 10px;
+}
+
+.right h2, .right .h2 {
+    margin: 0 0 15px 0;
+}
+
+.center-min > h1, .center-middle > h1, .center-full > h1 {
+    margin: 0 0 15px 0;
+}
+
+.button{
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    background: #848484;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.button:hover{
+    background: #606060;
+}
+
+.button:active{
+    background: #848484;
+}
+
+.placeholder {
+    color: #333;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #333;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #333;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #333;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #333;
+}
+/*---------/STANDART STYLES*------------*/
+
+
+/*---------HEADER------------*/
+header{
+    height: 70px;
+    background: #658397;
+}
+
+header .content{
+    background: #a1d2e8;
+}
+
+header .logo{
+    float: left;
+}
+
+header .contacts {
+    float: right;
+}
+/*---------/HEADER------------*/
+
+
+/*---------MENU-TOP------------*/
+/*---------/core menu top------------*/
+.menu-top{
+
+}
+
+.menu-top ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Обнуляем шрифт и line-height у родителя*/
+.menu-top > ul{
+    text-align: justify;
+    line-height: 0;
+    font-size: 1px;
+    background: #F5F5F5;
+}
+
+/* доп элемент для выравнивания по ширине */
+.menu-top li.helper {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.menu-top > ul > li{
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+
+    /* Востанавливаем у потомков, кроме последнего*/
+    line-height: normal;
+    font-size: 14px;
+
+    /* Без него в Opera будет отступ под элементами */
+    vertical-align: top;
+}
+
+.menu-top ul li ul{
+    display:none;
+    position:absolute;
+    min-width:100%;
+    left: 0;
+    white-space: nowrap;
+}
+.menu-top ul li:hover ul{display:block}
+/*---------/core menu top------------*/
+
+/*---------main menu-top------------*/
+.menu-top > ul > li{
+    background-color:#F5F5F5;
+    text-align:center;
+}
+
+.menu-top > ul > li:hover{
+    background-color: #c9c9c9;
+}
+.menu-top > ul > li.selected{
+    background-color:#c9c9c9;
+}
+
+.menu-top > ul > li > a{
+    display: block;
+    padding:10px 10px;
+    border:1px solid #c9c9c9;
+    text-decoration:none;
+}
+/*---------/main menu-top------------*/
+
+/*---------sub menu-top------------*/
+.menu-top ul li ul{
+    background-color:#ffffff;
+    border:1px solid #E8E8E8;
+}
+
+.menu-top ul li ul li{
+    text-align:left;
+    padding:5px 15px 5px 15px;
+}
+
+.menu-top ul li ul li a{
+    text-decoration:none;
+}
+
+.menu-top ul li ul li a:hover{
+    color:#553CCF;
+}
+/*---------/sub menu-top------------*/
+/*---------/MENU-TOP------------*/
+
+
+/*---------PATH------------*/
+.path{
+    padding: 4px 0 16px 0;
+}
+
+.path a {
+    color: #255f99;
+}
+
+.path .separator {
+    color: #666666;
+}
+
+.path a.selected {
+    color: #666666;
+    text-decoration: none;
+    cursor: default;
+}
+/*---------/PATH------------*/
+
+
+/*--------- SLIDER------------*/
+.viewport .item,
+.owl-carousel .item{
+    display: inline-block;
+    width: 160px;
+    background: #bababa;
+    vertical-align: top;
+    margin: 0 0 15px 0;
+}
+
+.viewport .item .img-container,
+.owl-carousel .item .img-container{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+}
+
+.viewport .item .img-container img,
+.owl-carousel .item .img-container img{
+    max-width: 160px;
+    max-height: 160px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+/*--------- SLIDER------------*/
+
+
+/*---------/CATALOG-MENU------------*/
+.catalog-menu ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.catalog-menu ul li{
+    margin-bottom:2px;
+}
+
+.catalog-menu ul li:hover a:hover{
+    background: #B9B9B9;
+}
+
+.catalog-menu ul li.selected.active-link > a{
+    background: #B9B9B9;
+}
+
+.catalog-menu ul li a{
+    display:block;
+    border-radius:4px;
+    background:#f1f1f1;
+    padding:7px 10px;
+}
+
+.catalog-menu ul li ul{
+    margin: 10px 0 10px 10px;
+    padding:0;
+}
+
+.catalog-menu ul li.selected ul{
+
+}
+
+.catalog-menu ul li ul li{
+
+}
+
+.catalog-menu li ul li a{
+
+}
+/*---------/CATALOG-MENU------------*/
+
+
+/*---------NEWS (BLOCK)------------*/
+.news .item{
+    margin:10px 0;
+    border-bottom:1px solid #a5a5a5;
+}
+
+.news .item .date{
+    display:block;
+    font-weight: bold;
+}
+
+.news .item .img-container{
+    position: relative;
+    float:left;
+    width: 100px;
+    height: 100px;
+    margin: 5px 10px 5px 0;
+    background: #fff;
+}
+
+.news .item .img-container img {
+    max-width: 100px;
+    max-height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.news .item .title{
+    display: block;
+}
+/*---------/NEWS (BLOCK)------------*/
+
+
+/*---------NEWS (PAGE)------------*/
+.news.one .item{
+    margin:0 0 10px 0;
+    border: none;
+}
+
+.news.one .item .title{
+    margin: 0;
+}
+
+.news.one .item .date{
+    display:block;
+    font-weight: bold;
+}
+
+.news.one .item .img-container{
+    position: relative;
+    float:left;
+    width: 250px;
+    height: 250px;
+    margin: 5px 10px 5px 0;
+    background: #fff;
+}
+
+.news.one .item .img-container img {
+    max-width: 250px;
+    max-height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+/*---------/NEWS (PAGE)------------*/
+
+
+/*---------CATALOG------------*/
+.catalog .catalog-bg {
+    padding: 1px 0;
+    /*padding для того чтобы скрыть выступающий снизу бэграунд марджином*/
+}
+
+.catalog .catalog-container{
+    text-align: justify;
+    /*либо  text-align: center;*/
+    /*скрываем марджинами бэграунд сверху (от паддинга в 1px) и снизу (от псевдоэлемента)*/
+    margin-bottom: -43px;
+    margin-top: -1px;
+    padding: 10px 0;
+}
+
+.catalog .catalog-container:after {
+    content: ' i i i i i i i i ';
+    word-spacing: 158px;
+    padding-left: 158px;
+    /*паддинг и word-spacing равны на несколько пикс меньще, чем ширина блока (или вообще равны)*/
+    visibility: hidden;
+}
+
+.catalog .item {
+    display : inline-block;
+    width : 160px;
+    background: #bababa;
+    vertical-align: top;
+    margin: 0 0 15px 0;
+    padding: 5px 0;
+    text-align: center;
+
+    /*эмуляция inline-block для IE6-7*/
+    /*display : inline;*/
+    /*zoom : 1;*/
+}
+
+.catalog .item .img-container{
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 3px auto;
+    background: grey;
+}
+
+.catalog .item .img-container img {
+    max-width: 150px;
+    max-height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.catalog .item .price{
+    display: inline-block;
+    padding: 2px 10px;
+    color: #fff;
+    background: #a1a1a1;
+}
+
+.catalog .item .name{
+    display: block;
+    margin: 5px 0 0 0 ;
+}
+
+.catalog.one .catalog-container{
+    text-align: center;
+}
+/*---------/CATALOG------------*/
+
+
+/*---------TOVAR PAGE------------*/
+.tovar{
+
+}
+
+.tovar .info{
+    float: left;
+    width: 350px;
+}
+
+.tovar .info .price{
+    padding: 2px 10px;
+    color: #fff;
+    background: #a1a1a1;
+}
+/*---------/TOVAR PAGE------------*/
+
+
+/*---------TABS------------*/
+.tabs{
+    background: #fff;
+}
+
+.tabs-controls{
+    background: #B9B9B9;
+    overflow: hidden;
+}
+
+.tabs-controls .item{
+    float: left;
+    cursor: pointer;
+    padding: 15px 10px;
+}
+
+.tabs-controls .item.active{
+    background: #fff;
+    cursor: default;
+}
+
+.tabs-list .item{
+    display: none;
+    padding: 10px;
+}
+
+.tabs-list .item.active{
+    display: block;
+}
+/*---------/TABS------------*/
+
+
+/*---------FORM------------*/
+form input, form textarea {
+    display: inline-block;
+    border: 1px solid #d0d4d8;
+    margin-bottom: 15px;
+}
+
+input.success, textarea.success{
+    background: url('../img/validation-informer-success.png') right 1px no-repeat #fff;
+    border-color:#00cc00;
+}
+
+input.warning, textarea.warning{
+    background: url('../img/validation-informer-warning.png') right 1px no-repeat #fff;
+    border-color: #FF8F00;
+}
+
+input.error, textarea.error{
+    background: url('../img/validation-informer-error.png') right 1px no-repeat #fff;
+    border-color: #cc0000;
+}
+
+.item-form-element.success input, .item-form-element.success textarea{
+    background: url('../img/validation-informer-error.png') right 1px no-repeat #fff;
+    border-color: #cc0000;
+}
+
+.item-form-element.warning input, .item-form-element.warning textarea{
+    background: url('../img/validation-informer-error.png') right 1px no-repeat #fff;
+    border-color: #cc0000;
+}
+
+.item-form-element.error input, .item-form-element.error textarea{
+    background: url('../img/validation-informer-error.png') right 1px no-repeat #fff;
+    border-color: #cc0000;
+}
+
+.item-form-element {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.item-form-element input, .item-form-element textarea{
+    margin: 0;
+}
+
+.item-form-element .marker {
+    position: absolute;
+    top: 9px;
+    left: -9px;
+    color: #F45B28;
+}
+
+.item-form-element .title{
+    display: inline-block;
+    width: 85px;
+    vertical-align: top;
+    margin-top: 6px;
+}
+
+.item-form-element > span{
+    display: inline-block;
+    width: 85px;
+    vertical-align: top;
+    margin-top: 6px;
+}
+
+.item-form-element .validation-informer {
+    margin-top: 11px;
+    display: none;
+}
+
+.item-form-element.error .validation-informer, .item-form-element.warning .validation-informer {
+    display: block;
+}
+
+.item-form-element .validation-informer span{
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #FFF7BD;
+}
+
+.item-form-element .validation-informer span:before{
+    content: url('../img/validation-informer-bg.png');
+    width: 11px;
+    height: 9px;
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+form .status_message {
+    display: none;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #F0F0B0;
+    background: #FFF7BD;
+}
+
+
+.form-zakaz-item{
+    width: 220px;
+    text-align: center;
+    display: inline-block;
+}
+
+.form-zakaz-item .img-container{
+    position: relative;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+}
+
+.form-zakaz-item .img-container img{
+    max-width: 150px;
+    max-height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.form-zakaz-item .title{
+    width: 220px;
+}
+/*---------/FORM------------*/
+
+
+/*---------ВСПЛЫВАЮЩЕЕ ОКНО------------*/
+.window {
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    display:none;
+    text-align:center;
+    vertical-align:middle;
+    z-index: 98;
+}
+
+.window-popup-overflower{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 98;
+}
+
+.window .window_body{
+    position:relative;
+    vertical-align:middle;
+    text-align:left;
+    width:auto;
+    height:auto;
+    display:inline-block;
+    background:#fff;
+    border-radius:9px;
+    border:1px solid #ccc;
+    padding:20px 30px;
+    z-index:99;
+}
+
+.window .window_body .content{
+    width: auto;
+    background: #fff;
+}
+
+.window .close{
+    display:none;
+    cursor:pointer;
+    position:absolute;
+    right:-12px;
+    top:-12px;
+
+    text-align:center;
+
+    width:25px;
+    height:25px;
+    line-height:23px;
+
+    color:#fff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    border-radius: 13px;
+    box-shadow: #aaa 0 0 3px;
+
+    background: #AAA;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#CCCCCC), to(#999999));
+    background: -webkit-linear-gradient(#CCCCCC, #999999);
+    background: linear-gradient(#CCCCCC, #999999);
+
+}
+.window .close.show{
+    display:block;
+}
+
+.window.show {
+    display:inline-block;
+}
+
+.window.show .window_body {
+
+}
+/*---------/ВСПЛЫВАЮЩЕЕ ОКНО------------*/
+
+
+/*---------FAQ------------*/
+.faq-container{
+    margin-top: 20px;
+}
+
+.faq .faq-container .item {
+    position: relative;
+    margin: 0 0 20px 0;
+}
+
+.faq. faq-container .item .name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #777;
+}
+
+.faq .faq-container .item .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.faq .faq-container .item .answer {
+    margin: 25px 0 10px 0;
+    padding: 20px 40px 20px 40px;
+    background: #eee;
+    border-radius: 6px;
+}
+
+.faq .faq-container .item .question {
+    padding: 20px 40px;
+    margin-left: 30px;
+    background: #eee;
+    border-radius: 6px;
+}
+
+.faq textarea{
+    width: 450px;
+    height: 100px;
+}
+/*---------/FAQ------------*/
+
+
+/*---------PRICE------------*/
+.price{
+
+}
+
+.price-table{
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+
+.price-table tr th{
+    border: 1px solid #a5a5a5;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.price-table tr td{
+    border: 1px solid #a5a5a5;
+    padding: 5px;
+}
+
+.price-table td a{
+    float: left;
+}
+/*---------/PRICE------------*/
+
+
+/*---------LIST STYLE------------*/
+ul.style{
+    list-style: none;
+}
+
+ul.style li{
+    position: relative;
+}
+
+ul.style li:before{
+    content: url('../img/list-style-image.png');
+    width: 5px;
+    height: 9px;
+    position: absolute;
+    top: 0;
+    left: -13px;
+}
+/*---------/LIST STYLE------------*/
+
+
+/*---------INPUT FILE------------*/
+.input-file-container{
+    margin: 13px 0 0 0;
+    text-align: center;
+    width: 279px;
+}
+
+.input-file-container input[type=file]{
+    display:block;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.input-file-container .input-file-custom .span1{
+    color: #006699;
+    cursor: pointer;
+    border-bottom: 1px dotted #006699;
+}
+
+.input-file-container .input-file-custom .file-name{
+    position: relative;
+    display: none;
+}
+
+.input-file-container .clear-input-file{
+    cursor: pointer;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 3px;
+    right: -19px;
+}
+/*---------/ INPUT FILE------------*/
+
+
+/*---------SOCIALS------------*/
+.socials{
+
+}
+
+.socials .item{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url('../img/socials-sprite.png') no-repeat;
+    margin-right: 14px;
+}
+
+.socials .item.vk{
+    background-position: 0 0;
+}
+
+.socials .item.fb{
+    background-position: -30px 0;
+}
+
+.socials .item.twitter{
+    background-position: -60px 0;
+}
+
+.socials .item.gplus{
+    background-position: -90px 0;
+    margin-right: 0;
+}
+/*---------/SOCIALS------------*/
+
+
+/*---------PAGINATION------------*/
+.pagination{
+
+}
+
+.pagination .item{
+    display: inline-block;
+    text-align: center;
+    padding: 4px 6px;
+    margin-right: 6px;
+    background: #fff;
+    border: 1px solid #d1d1d1;
+    text-decoration: none;
+}
+
+.pagination .item.selected{
+    color: #666666;
+    background: #e8e8e9;
+}
+
+.pagination .item:hover{
+    color: #666666;
+    background: #e8e8e9;
+}
+/*---------/PAGINATION------------*/
+
+
+/*---------FOOTER------------*/
+footer {
+    position: relative;
+    margin-top: -150px;
+    width: 100%;
+    min-width: 1000px;
+    height: 150px;
+    overflow: hidden;
+    z-index: 97;
+}
+
+footer .content{
+    height: 100%;
+}
+
+.hFooter {
+    height: 150px;
+}
+
+footer .contacts {
+    float: left;
+}
+
+footer .copyright {
+    float: right;
+    width: 195px;
+    color: #fffbe5;
+    text-align: right;
+    line-height: 19px;
+}
+
+footer .masterweb {
+    margin-top: 12px;
+}
+/*---------/FOOTER------------*/
+
+
+/*---------OTHER STYLES------------*/
+/*Кнопка Наверх*/
+.toTop {
+    width:100px;
+    padding: 5px;
+    background:#f7f7f7;
+    text-align:center;
+    position:fixed;
+    top:50px;
+    left:10px;
+    cursor:pointer;
+    display:none;
+    z-index: 100;
+}
+
+/*Кнопка Свернуть-развернуть*/
+.see-all{
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Для кастомного скролла*/
+.content-with-scroll {
+    position: relative;
+    width: 300px;
+    max-height: 200px;
+    overflow: auto;
+    background-color: #fff;
+}
+/*---------/OTHER STYLES------------*/

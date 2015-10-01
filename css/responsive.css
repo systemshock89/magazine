@@ -1,0 +1,494 @@
+/*version: 0.0.4*/
+
+/*---------RESPONSIVE STYLES------------*/
+/* FOR TABLET - max-width: 1000px */
+@media only screen and (max-width: 1000px) {
+
+    /*---------RESPONSIVE STANDART STYLES------------*/
+    img,
+    iframe,
+    video{
+        max-width: 100%;
+        height: auto;
+        width: auto\9;
+    }
+
+    #overflow_div{
+        min-width: inherit;
+        min-height: inherit;
+    }
+
+    .content{
+        padding: 0 2%;
+        width: 96%;
+    }
+
+    .content > .overflower{
+        width: 100%;
+    }
+
+    .content > .overflower.rightfloating{
+        margin-left: 0;
+    }
+
+    .floatblock{
+        padding: 4% 0 6% 0;
+    }
+
+    .floatblock.left{
+        width: 22%;
+        margin-right: 2%;
+    }
+
+    .floatblock.center-min{
+        width: 76%;
+    }
+
+    .floatblock.center-middle{
+        width: 76%;
+    }
+
+    .floatblock.center-full {
+        width: 100%;
+    }
+
+    .floatblock.right{
+        display: none!important;
+    }
+
+    .floatblock.padding-right{
+        display: none!important;
+    }
+
+    .left .block {
+        margin: 0 0 4% 0;
+    }
+
+    .right .block {
+        margin: 0 0 4% 0;
+    }
+
+    .center-min .block, .center-middle .block, .center-full .block {
+        margin-bottom: 4%;
+    }
+
+    .left h2, .left .h2 {
+        margin: 0 0 2% 0;
+    }
+
+    .right h2, .right .h2 {
+        margin: 0 0 2% 0;
+    }
+
+    .center-min > h1, .center-middle > h1, .center-full > h1 {
+        margin: 0 0 2% 0;
+    }
+    /*---------/RESPONSIVE STANDART STYLES------------*/
+
+
+    /*---------RESPONSIVE NEWS (ALL)------------*/
+    .news .item{
+        margin: 2% 0;
+    }
+    .news .item .float-container .img-container{
+        margin: 0 2% 0 0 ;
+    }
+
+    .news .item .float-container{
+        margin: 2% 0;
+    }
+    /*--------- /RESPONSIVE NEWS (ALL)------------*/
+
+
+    /*---------RESPONSIVE CATALOG------------*/
+    .catalog .catalog-container:after {
+        word-spacing: 300px;
+        padding-left: 300px;
+    }
+
+    .catalog .item {
+        width: 300px;
+    }
+
+    .catalog .item .img-container {
+        width: 245px;
+        height: 215px;
+    }
+
+    .catalog .item .img-container img{
+        max-width: 245px;
+        max-height: 215px;
+    }
+
+    .catalog.one .item{
+        width: 100%;
+    }
+
+    .catalog.one .item .img-container{
+        width: 100%;
+    }
+
+    /*catalog.sections*/
+    .catalog.sections .catalog-container:after {
+        word-spacing: 280px;
+        padding-left: 280px;
+    }
+
+    .catalog.sections .item {
+        width: 280px;
+    }
+
+    .catalog.sections .item .img-container {
+        width: 260px;
+        height: 113.5px;
+    }
+
+    .catalog.sections .item .img-container img {
+        max-width: 315px;
+        max-height: 113.5px;
+    }
+
+    /*catalog.gallery*/
+    .catalog.gallery .catalog-container:after {
+        word-spacing: 258px;
+        padding-left: 258px;
+    }
+
+    .catalog.gallery .item {
+        width: 260px;
+    }
+
+    .catalog.gallery .item .img-container {
+        width: 260px;
+        height: 169px;
+    }
+
+    .catalog.gallery .item .img-container img {
+        max-width: 230px;
+        max-height: 149px;
+    }
+    /*---------/RESPONSIVE CATALOG------------*/
+
+
+    /*---------RESPONSIVE TOVAR PAGE------------*/
+    .tovar-container .tovar_slider{
+        width: 100%;
+    }
+
+    .tovar-container .tovar_slider .synced_slider1{
+        width: 100%;
+    }
+
+    .tovar-container .tovar_slider .synced_slider2{
+        width: 92.4%;
+        margin-left: 7.6%;
+    }
+
+    .synced_slider2 .owl-carousel .item{
+        width: auto;
+    }
+
+    .synced_slider2 .owl-carousel .item .img-container{
+        width: auto;
+    }
+
+    .synced_slider2 .owl-carousel .item .img-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .tovar-container .info{
+        width: 100%;
+        margin-top: 2%;
+    }
+    /*--------- /RESPONSIVE TOVAR PAGE------------*/
+
+
+    /*---------RESPONSIVE PRICE------------*/
+    .price-table{
+        overflow: auto;
+        display: block;
+    }
+
+    .price-table td.name{
+        width: 58%;
+        min-width: 420px;
+        padding: 2% 1%;
+    }
+
+    .price-table td.name span{
+        width: 82%;
+    }
+
+    .price-table td.name .button{
+        width: 16%;
+        box-sizing: border-box;
+    }
+    /*---------/RESPONSIVE PRICE------------*/
+
+
+    /*---------RESPONSIVE FORM------------*/
+    .window .item-form-element .title{
+        width: 32%!important;
+        padding-right: 2%;
+        margin-bottom: 2%;
+    }
+
+    .window .item-form-element input{
+        width: 64%!important;
+        box-sizing: border-box;
+    }
+
+    .window .item-form-element textarea{
+        width: 64%!important;
+        box-sizing: border-box;
+    }
+    /*---------/RESPONSIVE FORM------------*/
+
+
+    /*---------RESPONSIVE ВСПЛЫВАЮЩЕЕ ОКНО------------*/
+    .window .window_body{
+        padding: 4% 5%;
+        width: 60%;
+        margin: 0 15%;
+        box-sizing: border-box;
+    }
+
+    .window .window_body .content{
+        width: 100%;
+        padding: 0;
+    }
+    /*---------RESPONSIVE ВСПЛЫВАЮЩЕЕ ОКНО------------*/
+
+
+    /*---------RESPONSIVE FAQ------------*/
+    .window .faq .item-form-element > span{
+        width: 32%;
+        padding-right: 2%;
+    }
+
+    .window .faq textarea{
+        width: 64%!important;
+        box-sizing: border-box;
+    }
+
+    .window .faq input[type='text']{
+        width: 64%!important;
+        box-sizing: border-box;
+    }
+    /*---------/RESPONSIVE FAQ------------*/
+
+
+    /*--------- RESPONSIVE WIDGET-PHONE ------------*/
+    .widget-phone-form .item-form-element input{
+        width: 100%!important;
+        box-sizing: border-box;
+    }
+
+    .widget-phone-form{
+        width: 100%;
+        padding: 0;
+    }
+
+    .widget-phone-popup{
+        width: 100%;
+        padding: 0;
+    }
+
+    .widget-phone-popup .item-form-element input{
+        width: 100%!important;
+    }
+    /*--------- /RESPONSIVE WIDGET-PHONE ------------*/
+
+
+    /*---------RESPONSIVE FOOTER------------*/
+    footer{
+        min-width: inherit;
+    }
+    /*---------/RESPONSIVE FOOTER------------*/
+
+
+    /*---------/RESPONSIVE OTHER STYLES------------*/
+    .sendmessage_form table.sendmessgae{
+        width: 100%;
+    }
+
+    .sendmessage_form tr td.left{
+        width: 30%;
+    }
+
+    .sendmessage_form tr td.right{
+        width: 70%;
+    }
+
+    .sendmessage_form input[type=text], .sendmessage_form textarea{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    /*---------/RESPONSIVE OTHER STYLES------------*/
+}
+/* /FOR TABLET - max-width: 1000px */
+
+
+/* FOR PHONE - max-width: 650px */
+@media only screen and (max-width: 650px) {
+
+    /*---------RESPONSIVE STANDART STYLES------------*/
+    .floatblock.center-min{
+        width: 100%;
+    }
+
+    .floatblock.center-middle{
+        width: 100%;
+    }
+
+    .floatblock.left{
+        float: none;
+        width: 100%;
+    }
+
+
+    .floatblock.right{
+        float: none;
+        width: 100%;
+    }
+    /*---------/RESPONSIVE STANDART STYLES------------*/
+
+
+    /*---------RESPONSIVE CATALOG------------*/
+    .catalog .catalog-container {
+        margin-bottom: 0;
+    }
+
+    .catalog .catalog-container:after{
+        content: '';
+        word-spacing: inherit;
+        padding-left: 0;
+    }
+
+    .catalog .item{
+        width: 100%;
+        padding: 2%;
+        margin-bottom: 4%;
+        box-sizing: border-box;
+    }
+
+    .catalog .item .img-container{
+        width: 100%;
+    }
+
+    /*catalog.one*/
+    .catalog.one .catalog-container:after {
+        word-spacing: inherit;
+        padding-left: 0;
+    }
+
+    .catalog.one .item{
+        width: 100%;
+    }
+
+    /*catalog.sections*/
+    .catalog.sections .catalog-container:after {
+        word-spacing: inherit;
+        padding-left: 0;
+    }
+
+    .catalog.sections .item {
+        width: 100%;
+    }
+
+    /*catalog.gallery*/
+    .catalog.gallery .catalog-container:after {
+        word-spacing: inherit;
+        padding-left: 0;
+    }
+
+    .catalog.gallery .item {
+        width: 100%;
+    }
+    /*---------/RESPONSIVE CATALOG------------*/
+
+
+    /*---------RESPONSIVE FORM------------*/
+    .window .item-form-element .title{
+        width: 100%;
+        padding-right: 0;
+    }
+    .window .item-form-element input{
+        width: 100%!important;
+        padding-right: 0;
+    }
+
+    .window .item-form-element textarea{
+        width: 100%!important;
+    }
+    /*---------/RESPONSIVE FORM------------*/
+
+
+    /*---------RESPONSIVE ВСПЛЫВАЮЩЕЕ ОКНО------------*/
+    .window .window_body{
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    .window .window_body .content{
+        width: 100%;
+        padding: 0;
+    }
+    /*---------RESPONSIVE ВСПЛЫВАЮЩЕЕ ОКНО------------*/
+
+
+    /*---------RESPONSIVE FAQ------------*/
+    .window .faq .item-form-element > span{
+        width: 100%!important;
+        padding-right: 0;
+        margin-bottom: 2%;
+    }
+
+    .window .faq textarea{
+        width: 100%!important;
+    }
+
+    .window .faq input[type='text']{
+        width: 100%!important;
+    }
+    /*---------/RESPONSIVE FAQ------------*/
+
+
+    /*---------RESPONSIVE OTHER STYLES------------*/
+    .toTop{
+        display: none!important;
+    }
+
+    .widget-phone{
+        display: none!important;
+    }
+
+    .menu-top {
+        display:none;
+    }
+
+    .slicknav_menu {
+        display:block;
+    }
+
+    .path{
+        display: none;
+    }
+
+    .sendmessage_form tr td.left{
+        width: 100%;
+        display: block;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+
+    .sendmessage_form tr td.right{
+        width: 100%;
+        display: block;
+    }
+    /*--------- /RESPONSIVE OTHER STYLES------------*/
+
+}
+/* /FOR PHONE - max-width: 650px */
+/*---------RESPONSIVE STYLES------------*/

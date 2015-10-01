@@ -1,0 +1,55 @@
+/* General settings */
+div.radio span {
+  background-image: url("../img/radio.png");
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased; }
+
+/* Radio */
+div.radio {
+  position: relative; }
+  div.radio, div.radio span, div.radio input {
+      cursor: pointer;
+    width: 20px;
+    height: 19px; }
+  div.radio span {
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    text-align: center;
+    background-position: 0 0; }
+    div.radio span.checked {
+      background-position: -20px 0; }
+  div.radio input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    border: none;
+    background: none;
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    text-align: center; }
+  div.radio.active span {
+    background-position: 0 0; }
+    div.radio.active span.checked {
+      background-position: -20px 0; }
+  div.radio.hover span, div.radio.focus span {
+    background-position: 0 0; }
+    div.radio.hover span.checked, div.radio.focus span.checked {
+      background-position: -20px 0; }
+  div.radio.hover.active span, div.radio.focus.active span {
+    background-position: 0 0; }
+    div.radio.hover.active span.checked, div.radio.focus.active span.checked {
+      background-position: -20px 0; }
+  div.radio.disabled span, div.radio.disabled.active span {
+    background-position: 0 0; }
+    div.radio.disabled span.checked, div.radio.disabled.active span.checked {
+      background-position: -20px 0; }
+
+
+/* PRESENTATION */
+/* Radio */
+div.radio {
+  margin-right: 3px; }
