@@ -1,4 +1,4 @@
-/*version: 0.1.1*/
+/*version: 0.1.2*/
 /*---------STANDART STYLES------------*/
 html, body {
     width: 100%;
@@ -1582,22 +1582,18 @@ form .status_message {
 
 .faq .faq-container .item {
     position: relative;
-    margin: 0 0 20px 0;
+    margin: 0 0 40px 0;
 }
 
-.faq. faq-container .item .name {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #777;
+.faq .faq-container .item .name {
+    font-weight: bold;
 }
 
 .faq .faq-container .item .date {
     position: absolute;
     top: 0;
     right: 0;
-    color: #333;
-    font-weight: bold;
+    color: #777;
 }
 
 .faq .faq-container .item .question {
@@ -2294,3 +2290,57 @@ a.fancybox-thumb[href$=".png"]:hover .img-container:before{
 }
 /* /sendmessage_form*/
 /*--------- /MASTERWEB CMS STYLES------------*/
+
+/*--------- cart-style ------------*/
+
+/* ---- верхняя миникорзина ---- */
+.header-mini-cart {
+	position:absolute;
+	right:130px;
+	top:35px;
+}
+
+.header-mini-cart .mini-cart-content{
+	
+}
+/* ---- /верхняя миникорзина ---- */
+
+/* ---- правая миникорзина ---- */
+.right-mini-cart {
+	z-index:10;
+	position:fixed;
+	right:-150px;
+	top:35%;
+	width:200px;
+	border:1px solid #848484;
+	background:#fff;
+}
+
+.right-mini-cart .mini-cart-content{
+	padding: 20px 30px 20px 0px;
+	margin-left:50px;
+	width:130px;
+	
+}
+
+.right-mini-cart .mini-cart-show-button{
+	position:absolute;
+	left:0px;
+	top:0px;
+	bottom:0px;
+	right:0px;
+	width:50px;
+	height:100%;
+	
+	cursor:pointer;
+	
+	background:url('/img/1443458377_cart.png') 10px center no-repeat;
+	
+}
+.right-mini-cart.show {
+	right:0px;
+}
+/* ---- /правая миникорзина ---- */
+
+
+/*--------- /cart-style ------------*/
