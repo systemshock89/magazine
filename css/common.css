@@ -1614,38 +1614,39 @@ form .status_message {
     margin: 0 5px;
 }
 
-.window .faq .item-form-element > span {
+.faq.nc-form .item-form-element > span,
+.faq.nc-form .nc-field-caption{
     width: 155px;
     display: inline-block;
     vertical-align: middle;
     padding-right: 15px;
 }
 
-.window .faq textarea {
+.faq.nc-form textarea {
     width: 350px;
     height: 100px;
 }
 
-.window .faq input[type='text'] {
+.faq.nc-form input[type='text'] {
     width: 350px;
 }
 
-.window .faq input[type='text'].input-captcha {
+.faq.nc-form input[type='text'].input-captcha {
     width: 271px;
 }
 
-.window .faq .faq-captcha {
+.faq.nc-form .faq-captcha {
     display: inline-block;
     vertical-align: middle;
     margin-top: 5px;
 }
 
-.window .faq .faq-captcha > div {
+.faq.nc-form .faq-captcha > div {
     display: inline-block;
     vertical-align: middle;
 }
 
-.window .faq-captcha > button {
+.faq-captcha.nc-form > button {
     display: inline-block;
     vertical-align: middle;
     margin: 0 10px;
