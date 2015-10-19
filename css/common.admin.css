@@ -1,4 +1,4 @@
-/*version: 0.0.2*/
+/*version: 0.0.3*/
 /*---------STANDART STYLES*------------*/
 html, body {
     width:100%;
@@ -1099,5 +1099,9 @@ footer .masterweb {
     max-height: 200px;
     overflow: auto;
     background-color: #fff;
+}
+
+.index_slider .content{
+    height: auto;
 }
 /*---------/OTHER STYLES------------*/
