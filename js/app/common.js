@@ -141,6 +141,9 @@ $(function(){
                 transitionStyle : "backSlide"
             });
 
+            owl.find('.owl-controls .owl-buttons .owl-prev').attr('title', 'Предыдущий');
+            owl.find('.owl-controls .owl-buttons .owl-next').attr('title', 'Следующий');
+
             // Custom Navigation Events
 //                    owl.parent().find(".to_right").click(function(){
 //                        owl.trigger('owl.next');
