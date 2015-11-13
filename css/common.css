@@ -1,4 +1,4 @@
-/*version: 0.1.4*/
+/*version: 0.1.5*/
 /*---------STANDART STYLES------------*/
 html, body {
     width: 100%;
@@ -519,7 +519,8 @@ header .contacts {
     margin: auto;
 }
 
-.index_slider .owl-theme .owl-controls .owl-buttons .owl-prev, .index_slider .owl-theme .owl-controls .owl-buttons .owl-next{
+.index_slider .owl-theme .owl-controls .owl-buttons .owl-prev,
+.index_slider .owl-theme .owl-controls .owl-buttons .owl-next{
     width: 28px;
     height: 44px;
     cursor: pointer;
@@ -532,6 +533,9 @@ header .contacts {
     opacity: 0.5;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
+     -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+     border-radius: 0;
     background: url('../img/slider-arrows.png');
 }
 
@@ -1407,7 +1411,6 @@ textarea.error:focus, .item-form-element.error textarea:focus{
     padding: 5px 10px;
     border-radius: 5px;
     background: #FFF7BD;
-    border: 1px solid #F0F0B0;
     text-align: center;
 }
 
