@@ -1,6 +1,6 @@
 ﻿/**
  * @description Основные скрипты
- * version: 0.0.6
+ * version: 0.0.7
  */
 
 $(function(){
@@ -184,12 +184,7 @@ $(function(){
             itemsDesktopSmall: [979, 3],
             itemsTablet: [768, 3],
             itemsMobile: [479, 2],
-            navigation: true,
             pagination: false,
-            navigationText: [
-                "",
-                ""
-            ],
             responsiveRefreshRate: 100,
             afterInit: function (el) {
                 el.find(".owl-item").eq(0).addClass("synced");
@@ -201,6 +196,15 @@ $(function(){
             var number = $(this).data("owlItem");
             sync1.trigger("owl.goTo", number);
         });
+
+        // Custom Navigation Events
+        sync2.parent().parent().find(".to_right").click(function(){
+            sync2.trigger('owl.next');
+        });
+
+        sync2.parent().parent().find(".to_left").click(function(){
+            sync2.trigger('owl.prev');
+        })
 
     }
 
@@ -243,6 +247,7 @@ $(function(){
 
     }
     /* /SYNCED Owl Slider */
+
 
     /* placeholder */
     if ($('input').attr('placeholder') || $('textarea').attr('placeholder')) {
