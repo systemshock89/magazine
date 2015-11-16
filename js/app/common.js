@@ -1,6 +1,6 @@
 ﻿/**
  * @description Основные скрипты
- * version: 0.0.7
+ * version: 0.0.8
  */
 
 $(function(){
@@ -161,8 +161,10 @@ $(function(){
     /* SYNCED Owl Slider */
     if( $(".synced_slider1 .owl-carousel").is("div") ) {
 
-        var sync1 = $(".synced_slider1 .owl-carousel");
-        var sync2 = $(".synced_slider2 .owl-carousel");
+        var sync1 = $(".synced_slider1 .owl-carousel"),
+            sync2 = $(".synced_slider2 .owl-carousel"),
+            carouselNext = sync2.parent().parent().find(".to_right"),
+            carouselPrev = sync2.parent().parent().find(".to_left");
 
         sync1.owlCarousel({
             singleItem: true,
@@ -188,6 +190,25 @@ $(function(){
             responsiveRefreshRate: 100,
             afterInit: function (el) {
                 el.find(".owl-item").eq(0).addClass("synced");
+            },
+            afterAction: function(){
+                if ( this.itemsAmount > this.visibleItems.length ) {
+                    $(carouselNext).show();
+                    $(carouselPrev).show();
+
+                    $(carouselNext).removeClass('disabled');
+                    $(carouselPrev).removeClass('disabled');
+                    if ( this.currentItem == 0 ) {
+                        $(carouselPrev).addClass('disabled');
+                    }
+                    if ( this.currentItem == this.maximumItem ) {
+                        $(carouselNext).addClass('disabled');
+                    }
+
+                } else {
+                    $(carouselNext).hide();
+                    $(carouselPrev).hide();
+                }
             }
         });
 
@@ -198,11 +219,11 @@ $(function(){
         });
 
         // Custom Navigation Events
-        sync2.parent().parent().find(".to_right").click(function(){
+        carouselNext.click(function(){
             sync2.trigger('owl.next');
         });
 
-        sync2.parent().parent().find(".to_left").click(function(){
+        carouselPrev.click(function(){
             sync2.trigger('owl.prev');
         })
 
