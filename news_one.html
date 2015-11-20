@@ -83,12 +83,13 @@
                     </div>
 
                     <h1>Одна новость</h1>
-                    <div class="news one block">
+                    <div class="news one block" itemscope itemtype="http://schema.org/Article">
                         <div class="item">
+                            <meta itemprop='name' content='news_name'>
                             <div class="date">21.02.2014</div>
                             <div class="float-container clearfix">
-                                <div class="img-container"><img src="/img/logo.png" alt=""></div>
-                                <div class="anons">Текст новости Текст новости Текст новости Текст новости Текст новости
+                                <div class="img-container"><img src="/img/logo.png" alt="" itemprop="image" ></div>
+                                <div class="anons" itemprop="description">Текст новости Текст новости Текст новости Текст новости Текст новости
                                     Текст новости Текст новости Текст новости Текст новости Текст новости Текст новости
                                     Текст новости Текст новости Текст новости Текст новости
                                 </div>

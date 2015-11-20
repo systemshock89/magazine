@@ -87,7 +87,8 @@
                     </div>
 
                     <h1>Телевизор ламповый</h1>
-                    <div class="tovar-container block clearfix">
+                    <div class="tovar-container block clearfix" itemscope itemtype="http://schema.org/Product">
+                        <meta itemprop="name" content="tovar_name">
 
                         <!--slider-->
                         <div class="tovar_slider">
@@ -96,43 +97,43 @@
                                     <div class="item">
                                         <a href="img/slide1.jpg" class="img-container fancybox-thumb"
                                            rel="tovar-gallery">
-                                            <img src="/img/slide1.jpg">
+                                            <img src="/img/slide1.jpg" itemprop="image">
                                         </a>
                                     </div>
                                     <div class="item">
                                         <a href="img/slide2.jpg" class="img-container fancybox-thumb"
                                            rel="tovar-gallery">
-                                            <img src="/img/slide2.jpg">
+                                            <img src="/img/slide2.jpg" itemprop="image">
                                         </a>
                                     </div>
                                     <div class="item">
                                         <a href="img/slide3.jpg" class="img-container fancybox-thumb"
                                            rel="tovar-gallery">
-                                            <img src="/img/slide3.jpg">
+                                            <img src="/img/slide3.jpg" itemprop="image">
                                         </a>
                                     </div>
                                     <div class="item">
                                         <a href="img/slide4.jpg" class="img-container fancybox-thumb"
                                            rel="tovar-gallery">
-                                            <img src="/img/slide4.jpg">
+                                            <img src="/img/slide4.jpg" itemprop="image">
                                         </a>
                                     </div>
                                     <div class="item">
                                         <a href="img/slide1.jpg" class="img-container fancybox-thumb"
                                            rel="tovar-gallery">
-                                            <img src="/img/slide1.jpg">
+                                            <img src="/img/slide1.jpg" itemprop="image">
                                         </a>
                                     </div>
                                     <div class="item">
                                         <a href="img/slide1.jpg" class="img-container fancybox-thumb"
                                            rel="tovar-gallery">
-                                            <img src="/img/slide1.jpg">
+                                            <img src="/img/slide1.jpg" itemprop="image">
                                         </a>
                                     </div>
                                     <div class="item">
                                         <a href="img/slide1.jpg" class="img-container fancybox-thumb"
                                            rel="tovar-gallery">
-                                            <img src="/img/slide1.jpg">
+                                            <img src="/img/slide1.jpg" itemprop="image">
                                         </a>
                                     </div>
                                 </div>
@@ -183,10 +184,14 @@
                         </div>
 
                         <div class="info">
-                            <div class="price">50 790 <span class="rouble">р</span></div>
+                            <div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                <span itemprop="price">50 790</span>
+                                <span class="rouble"> р</span>
+                                <meta itemprop="priceCurrency" content="RUB">
+                            </div>
                             <a class="button" href="#">Оформить заказ</a>
 
-                            <div class="description">Тестовое описание товара Тестовое описание товара Тестовое описание
+                            <div class="description" itemprop="description">Тестовое описание товара Тестовое описание товара Тестовое описание
                                 товара Тестовое описание товара
                             </div>
                         </div>
