@@ -1,17 +1,17 @@
 ﻿/**
  * @description Основные скрипты
- * version: 0.0.8
+ * version: 0.0.9
  */
 
-$(function(){
+$(function () {
 
-	/* MINI КОРЗИНА */
-	$('body').standart_load({ force:1, url:'/cart.php?dont_show=1' });
-	
-	$('.mini-cart-show-button').click(function(){
-		$(this).closest('.mini-cart').toggleClass('show');
-	});
-	/* /MINI КОРЗИНА */
+    /* MINI КОРЗИНА */
+    $('body').standart_load({force: 1, url: '/cart.php?dont_show=1'});
+
+    $('.mini-cart-show-button').click(function () {
+        $(this).closest('.mini-cart').toggleClass('show');
+    });
+    /* /MINI КОРЗИНА */
 
     /* ЭЛЕМЕНТЫ КАТАЛОГА */
     if ($('.catalog .catalog-container').size() > 0) {
@@ -84,16 +84,18 @@ $(function(){
     try {
         $('.menu-top').eq(0).slicknav({
             label: 'МЕНЮ',
-            prependTo:'.menu-top-container'
+            prependTo: '.menu-top-container'
         });
-    } catch(err) {
+    } catch (err) {
 
     }
     /* /Адаптивное верхнее меню */
 
 
     // Отменить перетаскивание картинок и ссылок
-    $("img, a").on("dragstart", function(event) { event.preventDefault(); });
+    $("img, a").on("dragstart", function (event) {
+        event.preventDefault();
+    });
 
 
     /* Стартуем слайдеры */
@@ -127,18 +129,18 @@ $(function(){
 
 
     /* Owl Index Slider */
-    $(function() {
-        if( $(".index_slider .owl-carousel").is("div") ){
+    $(function () {
+        if ($(".index_slider .owl-carousel").is("div")) {
 
-            var owl =  $('.index_slider .owl-carousel');
+            var owl = $('.index_slider .owl-carousel');
 
             owl.owlCarousel({
-                singleItem : true,
-                autoPlay : 12000,
-                stopOnHover : true,
+                singleItem: true,
+                autoPlay: 12000,
+                stopOnHover: true,
                 navigation: true,
                 responsiveBaseWidth: '.index_slider .owl-carousel',
-                transitionStyle : "backSlide"
+                transitionStyle: "backSlide"
             });
 
             owl.find('.owl-controls .owl-buttons .owl-prev').attr('title', 'Предыдущий');
@@ -159,7 +161,7 @@ $(function(){
 
 
     /* SYNCED Owl Slider */
-    if( $(".synced_slider1 .owl-carousel").is("div") ) {
+    if ($(".synced_slider1 .owl-carousel").is("div")) {
 
         var sync1 = $(".synced_slider1 .owl-carousel"),
             sync2 = $(".synced_slider2 .owl-carousel"),
@@ -168,15 +170,15 @@ $(function(){
 
         sync1.owlCarousel({
             singleItem: true,
-            autoPlay : 12000,
-            stopOnHover : true,
+            autoPlay: 12000,
+            stopOnHover: true,
             slideSpeed: 1000,
             navigation: false,
             pagination: false,
             afterAction: syncPosition,
             responsiveRefreshRate: 200,
             touchDrag: false,
-            mouseDrag : false
+            mouseDrag: false
 
         });
 
@@ -191,17 +193,17 @@ $(function(){
             afterInit: function (el) {
                 el.find(".owl-item").eq(0).addClass("synced");
             },
-            afterAction: function(){
-                if ( this.itemsAmount > this.visibleItems.length ) {
+            afterAction: function () {
+                if (this.itemsAmount > this.visibleItems.length) {
                     $(carouselNext).show();
                     $(carouselPrev).show();
 
                     $(carouselNext).removeClass('disabled');
                     $(carouselPrev).removeClass('disabled');
-                    if ( this.currentItem == 0 ) {
+                    if (this.currentItem == 0) {
                         $(carouselPrev).addClass('disabled');
                     }
-                    if ( this.currentItem == this.maximumItem ) {
+                    if (this.currentItem == this.maximumItem) {
                         $(carouselNext).addClass('disabled');
                     }
 
@@ -219,11 +221,11 @@ $(function(){
         });
 
         // Custom Navigation Events
-        carouselNext.click(function(){
+        carouselNext.click(function () {
             sync2.trigger('owl.next');
         });
 
-        carouselPrev.click(function(){
+        carouselPrev.click(function () {
             sync2.trigger('owl.prev');
         })
 
@@ -267,6 +269,7 @@ $(function(){
         }
 
     }
+
     /* /SYNCED Owl Slider */
 
 
@@ -325,34 +328,34 @@ $(function(){
 
             /* Подрубаем галерею */
             $(".fancybox-thumb").fancybox({
-                openEffect  : 'none',
-                closeEffect : 'elastic',
+                openEffect: 'none',
+                closeEffect: 'elastic',
                 prevEffect: 'fade',
                 nextEffect: 'fade',
                 //theme : 'dark',
                 //locked : false,
-                padding : 0,
-                caption : {
-                    type : 'outside'
+                padding: 0,
+                caption: {
+                    type: 'outside'
                 },
-                arrows : '!isTouch',
+                arrows: '!isTouch',
                 helpers: {
                     thumbs: {
                         width: 50,
                         height: 50
                     }
                 },
-                locale  : 'ru',
-                locales : {
-                    'ru' : {
-                        CLOSE      : 'Закрыть',
-                        NEXT       : 'Следующий',
-                        PREV       : 'Предыдущий',
-                        ERROR      : 'Запрашиваемый слайд не может быть загружен.<br/> Пожалуйста, повторите попытку позже.',
-                        EXPAND     : 'Показать оригинальный размер',
-                        SHRINK     : 'Вписать в экран',
-                        PLAY_START : 'Просмотр слайдшоу',
-                        PLAY_STOP  : 'Поставить показ слайдов на паузу'
+                locale: 'ru',
+                locales: {
+                    'ru': {
+                        CLOSE: 'Закрыть',
+                        NEXT: 'Следующий',
+                        PREV: 'Предыдущий',
+                        ERROR: 'Запрашиваемый слайд не может быть загружен.<br/> Пожалуйста, повторите попытку позже.',
+                        EXPAND: 'Показать оригинальный размер',
+                        SHRINK: 'Вписать в экран',
+                        PLAY_START: 'Просмотр слайдшоу',
+                        PLAY_STOP: 'Поставить показ слайдов на паузу'
                     }
                 }
             });
@@ -365,11 +368,11 @@ $(function(){
             }
 
             /* обновляем при ресайзе */
-            $( window ).resize(function() {
+            $(window).resize(function () {
                 $.fancybox.update();
             });
         }
-    } catch(err) {
+    } catch (err) {
 
     }
     /* /fancybox3 beta1 */
@@ -440,8 +443,8 @@ $(function(){
 
     /* Slider-range с возможностью вводить значения */
     /* НЕ ЗАБЫТЬ:
-    подставить перед document.ready условия, проверяющие, заданы ли параметры слайдера range через php, либо подставляющие дефолтные значения
-    ( они здесь находятся внизу файла) */
+     подставить перед document.ready условия, проверяющие, заданы ли параметры слайдера range через php, либо подставляющие дефолтные значения
+     ( они здесь находятся внизу файла) */
     if ($('div').is('.slider-range')) {
         $('head').append("<link rel='stylesheet' type='text/css'  href='/css/jquery-ui.css'/>");
         $.getScript('/js/lib/jquery-ui.min.js', function () {
@@ -514,9 +517,9 @@ $(function(){
             //ф-я позволяющая вводить в инпут только цифры
             function inputRestriction(item) {
                 item.keypress(function (event) {
-                    if ((event.which > 57 || event.which < 48) && event.which != 8)
-                        event.preventDefault();
-                })
+                        if ((event.which > 57 || event.which < 48) && event.which != 8)
+                            event.preventDefault();
+                    })
                     .change(function () {
                         input_value_1.val(input_value_1.val());
                         input_value_2.val(input_value_2.val());
@@ -555,8 +558,8 @@ $(function(){
 
 
     /* кнопка Наверх */
-    toTop ();
-    function toTop () {
+    toTop();
+    function toTop() {
         $('body').append('<div class="toTop" title="Наверх"></div>');
 
         var toTop = $('.toTop'),
@@ -576,24 +579,24 @@ $(function(){
         });
 
         toTop.click(function () {
-            $('body,html').animate({scrollTop: 0}, 500);
+                $('body,html').animate({scrollTop: 0}, 500);
 
-        })
+            })
             .hover(
-            function () {
-                $(this).stop().animate({
-                    opacity: 1
-                }, 250);
-            }, function () {
-                $(this).stop().animate({
-                    opacity: 0.3
-                }, 250);
-            }
-        );
+                function () {
+                    $(this).stop().animate({
+                        opacity: 1
+                    }, 250);
+                }, function () {
+                    $(this).stop().animate({
+                        opacity: 0.3
+                    }, 250);
+                }
+            );
 
 
         //определение позиции кнопки "Наверх"
-        if ( contentBlock.size()> 0 ){ // если указанный блок с контентом существует
+        if (contentBlock.size() > 0) { // если указанный блок с контентом существует
             toTopPosition();
 
             $(window).resize(function () {
@@ -602,14 +605,14 @@ $(function(){
         }
         function toTopPosition() {
             documentWidth = $(document).width();
-            if ( contentBlock.css('minWidth') == '0px'){
+            if (contentBlock.css('minWidth') == '0px') {
                 contentBlockWidth = parseInt(contentBlock.css('width'));
             } else {
                 contentBlockWidth = parseInt(contentBlock.css('minWidth'));
             }
-            contentOfsetLeft = (documentWidth - contentBlockWidth)/2;
+            contentOfsetLeft = (documentWidth - contentBlockWidth) / 2;
 
-            if ( documentWidth <= (contentBlockWidth + (toTopOffset + toTopWidth)*2 ) ){
+            if (documentWidth <= (contentBlockWidth + (toTopOffset + toTopWidth) * 2 )) {
                 // когда ширина окна браузера меньше чем ширина контента + ширина кнопки Назад
                 toTop.css('left', 15);
             } else {
@@ -618,6 +621,7 @@ $(function(){
             }
         }
     }
+
     /* /кнопка Наверх */
 
 
@@ -686,7 +690,7 @@ $(function(){
     /* развернуть список услуг/
 
 
-    /* jquery.form*/
+     /* jquery.form*/
     if ($(".open-popup").is('div')) {
         $.getScript('/js/lib/jquery.form.min.js', function () {
         });
@@ -695,7 +699,7 @@ $(function(){
 
 
     /* WIDGET PHONE */
-    if( $('.widget-phone').size()> 0){
+    if ($('.widget-phone').size() > 0) {
         $('.widget-phone').standart_widgetPhone({
             // widgetTimer: 0, // таймер ,по истечении которого появится виджет
             //contentBlock: $('#overflow_div'), // блок с контентом сайта (для позиционирования виджета)
@@ -705,60 +709,65 @@ $(function(){
 
 
     /* КАРТА YANDEX*/
-    if($('#map').size()>0){
-        var myMap;
+    try {
+        if ($('#map').size() > 0) {
 
-        function init () {
-            // Создание экземпляра карты и его привязка к контейнеру с
-            // заданным id ("map").
-            myMap = new ymaps.Map('map', {
-                // При инициализации карты обязательно нужно указать
-                // её центр и коэффициент масштабирования.
-                center:  [55.76, 37.64],
-                zoom: 10
-            });
+            var myMap;
 
-            // Создаем геообъект с типом геометрии "Точка".
-            myGeoObject = new ymaps.GeoObject({
-                // Описание геометрии.
-                geometry: {
-                    type: "Point",
-                    coordinates: [55.76, 37.64]
-                },
-                // Свойства.
-                properties: {
-                    // Контент метки.
-                    iconContent: 'Москва златоглавая',
-                    hintContent: 'Дополнительная инфа всплывает'
-                }
-            }, {
-                // Опции.
-                // Иконка метки будет растягиваться под размер ее содержимого.
-                preset: 'islands#blackStretchyIcon',
-                // Метку можно перемещать.
-                draggable: false
-            });
-
-            myMap.behaviors.disable('scrollZoom');
-
-            myMap.geoObjects
-                .add(myGeoObject);
-
-            // ховер на геообъект
-            myGeoObject.events
-                .add('mouseenter', function (e) {
-                    // Ссылку на объект, вызвавший событие,
-                    // можно получить из поля 'target'.
-                    e.get('target').options.set('preset', 'islands#redStretchyIcon');
-                })
-                .add('mouseleave', function (e) {
-                    e.get('target').options.set('preset', 'islands#blackStretchyIcon');
+            function init() {
+                // Создание экземпляра карты и его привязка к контейнеру с
+                // заданным id ("map").
+                myMap = new ymaps.Map('map', {
+                    // При инициализации карты обязательно нужно указать
+                    // её центр и коэффициент масштабирования.
+                    center: [55.76, 37.64],
+                    zoom: 10
                 });
 
-        }
+                // Создаем геообъект с типом геометрии "Точка".
+                myGeoObject = new ymaps.GeoObject({
+                    // Описание геометрии.
+                    geometry: {
+                        type: "Point",
+                        coordinates: [55.76, 37.64]
+                    },
+                    // Свойства.
+                    properties: {
+                        // Контент метки.
+                        iconContent: 'Москва златоглавая',
+                        hintContent: 'Дополнительная инфа всплывает'
+                    }
+                }, {
+                    // Опции.
+                    // Иконка метки будет растягиваться под размер ее содержимого.
+                    preset: 'islands#blackStretchyIcon',
+                    // Метку можно перемещать.
+                    draggable: false
+                });
 
-        // Дождёмся загрузки API и готовности DOM.
-        ymaps.ready(init);
+                myMap.behaviors.disable('scrollZoom');
+
+                myMap.geoObjects
+                    .add(myGeoObject);
+
+                // ховер на геообъект
+                myGeoObject.events
+                    .add('mouseenter', function (e) {
+                        // Ссылку на объект, вызвавший событие,
+                        // можно получить из поля 'target'.
+                        e.get('target').options.set('preset', 'islands#redStretchyIcon');
+                    })
+                    .add('mouseleave', function (e) {
+                        e.get('target').options.set('preset', 'islands#blackStretchyIcon');
+                    });
+
+            }
+
+            // Дождёмся загрузки API и готовности DOM.
+            ymaps.ready(init);
+        }
+    } catch (err) {
+
     }
     /* /КАРТА YANDEX*/
 
@@ -840,7 +849,8 @@ var Load = function (url, param) { // Функция для стандартиз
 
 var Message = function (message) { // Всплывающее сообщение на базе наработки standart_window
 
-    $('.window.message').remove(); /* Удалилил старое окно */
+    $('.window.message').remove();
+    /* Удалилил старое окно */
     /* Добавлеяем новое окно */
     $('body').append(
         '<div class="window message">' +
@@ -860,7 +870,7 @@ var Message = function (message) { // Всплывающее сообщение 
 
 
 //Баг в ie с прыгающим рывками элементом с position: fixed
-if(navigator.userAgent.match(/Trident.*rv[ :]*11\.| Edge\/12\./) || navigator.userAgent.match(/MSIE 10/i) || navigator.userAgent.match(/MSIE 9/i)) {
+if (navigator.userAgent.match(/Trident.*rv[ :]*11\.| Edge\/12\./) || navigator.userAgent.match(/MSIE 10/i) || navigator.userAgent.match(/MSIE 9/i)) {
     $('body').on("mousewheel", function (e) {
         e.preventDefault();
 
