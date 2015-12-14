@@ -275,7 +275,7 @@ $(function () {
 
     /* placeholder */
     if ($('input').attr('placeholder') || $('textarea').attr('placeholder')) {
-        $.getScript('/js/lib/jquery.placeholder.min.js', function () {
+        $.getScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.3.0/jquery.placeholder.min.js', function () {
 
             $('input[placeholder], textarea[placeholder]').placeholder();
 

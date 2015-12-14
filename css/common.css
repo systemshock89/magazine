@@ -1,23 +1,11 @@
-/*version: 0.1.7*/
+/*version: 0.1.8*/
 /*---------STANDART STYLES------------*/
 html, body {
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 0;
     font-family: tahoma;
     font-size: 12px;
     color: #000;
-}
-
-@font-face {
-    font-family: 'PTRoubleSans';
-    src: url('../fonts/rubsn.eot');
-    src: url('../fonts/rubsn.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/rubsn.woff2') format('woff2'),
-    url('../fonts/rubsn.woff') format('woff'),
-    url('../fonts/rubsn.ttf') format('truetype'),
-    url('../fonts/rubsn.svg#PTRoubleSans') format('svg');
 }
 
 a {
@@ -33,13 +21,8 @@ a, a:hover {
     transition: background 0.1s ease-in-out, border 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
-img {
-    border: none;
-}
-
-input {
-    font-family: tahoma;
-    font-size: 12px;
+input,
+select{
     padding: 5px 10px;
 }
 
@@ -62,11 +45,8 @@ textarea:focus {
 }
 
 textarea {
-    font-family: tahoma;
-    font-size: 12px;
     padding: 5px 10px;
     height: 70px;
-    overflow: auto;
     border: 1px solid #d0d4d8;
 
     outline: 0;
