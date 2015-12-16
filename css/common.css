@@ -58,6 +58,11 @@ label {
     cursor: pointer;
 }
 
+td,
+th {
+    padding: 5px;
+}
+
 #overflow_div {
     position: relative;
     width: 100%;
