@@ -1,6 +1,6 @@
 ﻿/**
  * @description Основные скрипты
- * version: 0.0.9
+ * version: 0.1.0
  */
 
 $(function () {
@@ -12,6 +12,7 @@ $(function () {
         $(this).closest('.mini-cart').toggleClass('show');
     });
     /* /MINI КОРЗИНА */
+
 
     /* ЭЛЕМЕНТЫ КАТАЛОГА */
     if ($('.catalog .catalog-container').size() > 0) {
@@ -284,42 +285,53 @@ $(function () {
     /* /placeholder */
 
 
-    ///* Динамическое подключение fancybox */
-    //if ($("a").is(".fancybox-thumb")) {
-    //    $('head').append("<link rel='stylesheet' type='text/css'  href='/css/fancybox/jquery.fancybox.css'/>"); /* Подключим стили */
-    //    $('head').append("<link rel='stylesheet' type='text/css'  href='/css/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7'/>");
-    //    $.getScript('/js/lib/fancybox/jquery.fancybox.js?v=2.1.5', function () {/* Подключим скрипт */
-    //        $.getScript('/js/lib/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7', function () {
-    //
-    //            /* Подрубаем галерею */
-    //            $(".fancybox-thumb").fancybox({
-    //                prevEffect: 'none',
-    //                nextEffect: 'none',
-    //                helpers: {
-    //                    title: {
-    //                        type: 'outside'
-    //                    },
-    //                    thumbs: {
-    //                        width: 50,
-    //                        height: 50
-    //                    },
-    //                    //overlay: {
-    //                    //    locked: false
-    //                    //}
-    //                }
-    //            });
-    //
-    //            /* Открываем автоматом по id через класс */
-    //            var start_id = window.location.href.indexOf("#");
-    //            if (start_id > 0) {
-    //                var id = window.location.href.substring(start_id + 1);
-    //                $('a.fancybox-thumb.id' + id).click();
-    //            }
-    //
-    //        });
-    //    });
-    //}
-    ///* /Динамическое подключение fancybox */
+    /* fancybox для картинок в контенте */
+    // adds .naturalWidth() and .naturalHeight() methods to jQuery
+    // for retreaving a normalized naturalWidth and naturalHeight.
+    (function($){
+        var
+            props = ['Width', 'Height'],
+            prop;
+
+        while (prop = props.pop()) {
+            (function (natural, prop) {
+                $.fn[natural] = (natural in new Image()) ?
+                    function () {
+                        return this[0][natural];
+                    } :
+                    function () {
+                        var
+                            node = this[0],
+                            img,
+                            value;
+
+                        if (node.tagName.toLowerCase() === 'img') {
+                            img = new Image();
+                            img.src = node.src,
+                                value = img[prop];
+                        }
+                        return value;
+                    };
+            }('natural' + prop, prop.toLowerCase()));
+        }
+    }(jQuery));
+
+    $('.content-wraper.content-center > .content p img').each(function(){
+        if(
+            //$(this).attr('style').indexOf('width:') != -1 &&
+            $(this).attr('style').indexOf('max-width:') == -1 &&
+            !$(this).attr('class') &&
+            ( $(this).width() <  $(this).naturalWidth() || $(this).height() <  $(this).naturalHeight() ) //если размер натуральной картинки больше чем показываемой картинки
+        ){
+            // Формируем фансибокс ссылку
+            var $a_elem = $("<a href='" + $(this).attr('src') + "' class='fancybox-thumb'></a>");
+            // добавляем к ней код текущего элемента
+            $a_elem.append($(this).clone());
+            // Производим подмену с текущим элементом
+            $(this).replaceWith($a_elem);
+        }
+    });
+    /* /fancybox для картинок в контенте */
 
 
     /* /fancybox3 beta1 */

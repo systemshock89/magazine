@@ -206,6 +206,28 @@
 
     /*--------- /RESPONSIVE TOVAR PAGE------------*/
 
+    /*---------RESPONSIVE INDEX OWL SLIDER------------*/
+    .index_slider{
+        height: auto;
+    }
+
+    .index_slider .content{
+        width: auto;
+    }
+
+    .index_slider .item{
+        height: auto;
+    }
+
+    .index_slider .item .img-container{
+        height: auto;
+    }
+
+    .index_slider .item .img-container img{
+        position: relative;
+    }
+    /*---------/RESPONSIVE INDEX OWL SLIDER------------*/
+
 
     /*---------RESPONSIVE PRICE------------*/
     .price-table {
