@@ -27,14 +27,6 @@ select{
     font-size: 12px;
     text-align: center;
 }
-
-.button:hover {
-    background: #606060;
-}
-
-.button:active {
-    background: #848484;
-}
 /*---------/STANDART STYLES*------------*/
 
 

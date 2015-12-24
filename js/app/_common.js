@@ -324,7 +324,7 @@ $(function () {
             ( $(this).width() <  $(this).naturalWidth() || $(this).height() <  $(this).naturalHeight() ) //если размер натуральной картинки больше чем показываемой картинки
         ){
             // Формируем фансибокс ссылку
-            var $a_elem = $("<a href='" + $(this).attr('src') + "' class='fancybox-thumb'></a>");
+            var $a_elem = $("<a href='" + $(this).attr('src') + "' title='" + $(this).attr('alt') + "' class='fancybox-thumb'></a>");
             // добавляем к ней код текущего элемента
             $a_elem.append($(this).clone());
             // Производим подмену с текущим элементом
