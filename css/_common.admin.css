@@ -97,7 +97,7 @@ h4,.h4{
 
 
 /*---------FAQ------------*/
-.faq.faq-container{
+.faq .faq-container{
     width: 800px;
 }
 .faq .faq-container .item {
