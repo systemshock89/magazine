@@ -15,7 +15,7 @@ $(function () {
 
 
     /* ЭЛЕМЕНТЫ КАТАЛОГА */
-    if ($('.catalog .catalog-container').size() > 0) {
+    if ($('.catalog .catalog-container .item').size() > 0) {
 
         var curPositionTop = $('.catalog .catalog-container > .item').eq(0).position().top, //берем позицию первого эл-та
             elementsInRow = []; //массив, в кот-й помещаем элементы, находящиеся на одной строке
@@ -30,7 +30,7 @@ $(function () {
                 /* Картинка по дефолту */
                 var cur_img = $(this).find('.img-container img').attr('src');
                 if (cur_img == "")
-                    $(this).find('.img-container img').attr({'src': '/img/empty_icon.jpg'});
+                    $(this).find('.img-container img').attr({'src': '/img/empty_icon.png'});
                 /* /Картинка по дефолту */
 
 
