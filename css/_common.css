@@ -2234,8 +2234,9 @@ a.fancybox-thumb[href$=".png"]:hover .img-container:before {
 
 #map {
     width: 100%;
-    height: 450px;
+    min-height: 450px;
     margin-top: 20px;
+    margin-bottom: 35px;
 }
 
 .slicknav_menu {
