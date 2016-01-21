@@ -161,6 +161,55 @@ $(function () {
     /* /Owl Index Slider */
 
 
+    /* Carousel Owl Slider */
+    $(function() {
+        if( $(".carousel_slider .owl-carousel").is("div") ){
+
+            var owl =  $('.carousel_slider .owl-carousel'),
+                carouselNext = owl.parent().parent().find(".to_right"),
+                carouselPrev = owl.parent().parent().find(".to_left");
+
+            owl.owlCarousel({
+                items : 3,
+                autoPlay : 12000,
+                stopOnHover : true,
+                responsiveBaseWidth: '.carousel_slider .owl-carousel',
+                pagination: false,
+                afterAction: function(){
+                    if ( this.itemsAmount > this.visibleItems.length ) {
+                        $(carouselNext).show();
+                        $(carouselPrev).show();
+
+                        $(carouselNext).removeClass('disabled');
+                        $(carouselPrev).removeClass('disabled');
+                        if ( this.currentItem == 0 ) {
+                            $(carouselPrev).addClass('disabled');
+                        }
+                        if ( this.currentItem == this.maximumItem ) {
+                            $(carouselNext).addClass('disabled');
+                        }
+
+                    } else {
+                        $(carouselNext).hide();
+                        $(carouselPrev).hide();
+                    }
+                }
+            });
+
+            // Custom Navigation Events
+            carouselNext.click(function(){
+                owl.trigger('owl.next');
+            });
+
+            carouselPrev.click(function(){
+                owl.trigger('owl.prev');
+            })
+
+        }
+    });
+    /* /Carousel Owl Slider */
+
+
     /* SYNCED Owl Slider */
     if ($(".synced_slider1 .owl-carousel").is("div")) {
 
