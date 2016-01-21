@@ -324,7 +324,7 @@ $(function () {
             ( $(this).width() <  $(this).naturalWidth() || $(this).height() <  $(this).naturalHeight() ) //если размер натуральной картинки больше чем показываемой картинки
         ){
             // Формируем фансибокс ссылку
-            var $a_elem = $("<a href='" + $(this).attr('src') + "' title='" + $(this).attr('alt') + "' class='fancybox-thumb'></a>");
+            var $a_elem = $("<a href='" + $(this).attr('src') + "' title='" + $(this).attr('alt') + "' style='" + $(this).attr('style') + ";display: block;'  class='fancybox-thumb img-container'></a>");
             // добавляем к ней код текущего элемента
             $a_elem.append($(this).clone());
             // Производим подмену с текущим элементом
@@ -895,8 +895,8 @@ if (navigator.userAgent.match(/Trident.*rv[ :]*11\.| Edge\/12\./) || navigator.u
 
 //preloader
 $(window).on('load', function () {
-
-    $(".page-preloader").fadeOut();
-    $(".page-preloader .spinner").delay(400).fadeOut("slow");
-
+    var $preloader = $('#page-preloader'),
+        $spinner = $preloader.find('.spinner');
+    $spinner.fadeOut();
+    $preloader.delay(400).fadeOut('slow');
 });

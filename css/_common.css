@@ -2210,6 +2210,9 @@ footer .copyright {
 }
 
 /*показать лупу, если фэнсибокс увеличивает картинку*/
+a.fancybox-thumb.img-container{
+    position: relative;
+}
 a.fancybox-thumb.img-container[href$=".jpg"]:hover:before,
 a.fancybox-thumb.img-container[href$=".JPG"]:hover:before,
 a.fancybox-thumb.img-container[href$=".png"]:hover:before,
@@ -2235,7 +2238,7 @@ a.fancybox-thumb[href$=".png"]:hover .img-container:before {
 #map {
     width: 100%;
     min-height: 450px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 35px;
 }
 
@@ -2244,27 +2247,29 @@ a.fancybox-thumb[href$=".png"]:hover .img-container:before {
 }
 
 /* preloader */
-.page-preloader {
+#page-preloader {
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     background: #fff;
-    z-index: 100500;
+    z-index: 30;
 }
 
-.page-preloader .spinner {
-    width: 150px;
-    height: 150px;
+#page-preloader .spinner {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    background: url('/img/preloader.gif') no-repeat 50% 50%;
-    margin: -75px 0 0 -75px;
+    width: 200px;
+    height: 200px;
+    background: url('/img/preloader.gif') no-repeat;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
-
 /*---------/OTHER STYLES------------*/
+
 
 /*---------MASTERWEB CMS STYLES------------*/
 /*sendmessage_form*/
@@ -2314,7 +2319,7 @@ a.fancybox-thumb[href$=".png"]:hover .img-container:before {
 /* ---- верхняя миникорзина ---- */
 .header-mini-cart {
     position: absolute;
-    right: 130px;
+    right: 309px;
     top: 35px;
 }
 
