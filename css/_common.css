@@ -123,10 +123,6 @@ th {
     width: 730px;
 }
 
-.floatblock.center-full {
-    width: 960px;
-}
-
 .floatblock.right {
     width: 210px;
     display: none;
@@ -1289,7 +1285,7 @@ header .contacts {
 /*---------CAROUSEL OWL SLIDER ------------*/
 .carousel_slider{
     position: relative;
-    width: 730px;
+    width: 960px;
 }
 
 .carousel_slider .owl-carousel-overflow{
@@ -1297,12 +1293,12 @@ header .contacts {
 }
 
 .carousel_slider .owl-carousel{
-    width: 795px!important;
-    margin-left: -32px;
+    width: 993px!important;
+    margin-left: -16px;
 }
 
 .carousel_slider .owl-carousel .item{
-    margin: 0 32px;
+    margin: 0 16px;
     width: 200px;
     height: 110px;
     position: relative;
@@ -1348,12 +1344,12 @@ header .contacts {
 }
 
 .carousel_slider .to_left{
-    left: -35px;
+    left: -60px;
     background-position: 0 0;
 }
 
 .carousel_slider .to_right{
-    right: -35px;
+    right: -60px;
     background-position: -28px 0;
 }
 

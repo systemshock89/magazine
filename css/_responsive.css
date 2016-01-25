@@ -46,10 +46,6 @@
         width: 76%;
     }
 
-    .floatblock.center-full {
-        width: 100%;
-    }
-
     .floatblock.right {
         display: none !important;
     }

@@ -170,7 +170,7 @@ $(function () {
                 carouselPrev = owl.parent().parent().find(".to_left");
 
             owl.owlCarousel({
-                items : 3,
+                items : 4,
                 autoPlay : 12000,
                 stopOnHover : true,
                 responsiveBaseWidth: '.carousel_slider .owl-carousel',
@@ -365,7 +365,7 @@ $(function () {
         }
     }(jQuery));
 
-    $('.content-wraper.content-center > .content p img').each(function(){
+    $('.content-wraper.content-center .content p img').each(function(){
         if(
             //$(this).attr('style').indexOf('width:') != -1 &&
             $(this).attr('style').indexOf('max-width:') == -1 &&
@@ -375,8 +375,10 @@ $(function () {
             // Формируем фансибокс ссылку
             var $a_elem = $("<a href='" + $(this).attr('src') + "' title='" + $(this).attr('alt') + "' style='" + $(this).attr('style') + ";display: block;'  class='fancybox-thumb img-container'></a>");
             // добавляем к ней код текущего элемента
+            $(this).css('margin',0);
             $a_elem.append($(this).clone());
             // Производим подмену с текущим элементом
+
             $(this).replaceWith($a_elem);
         }
     });
