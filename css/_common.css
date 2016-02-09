@@ -2306,12 +2306,8 @@ footer .copyright {
 a.fancybox-thumb.img-container{
     position: relative;
 }
-a.fancybox-thumb.img-container[href$=".jpg"]:hover:before,
-a.fancybox-thumb.img-container[href$=".JPG"]:hover:before,
-a.fancybox-thumb.img-container[href$=".png"]:hover:before,
-a.fancybox-thumb[href$=".jpg"]:hover .img-container:before,
-a.fancybox-thumb[href$=".JPG"]:hover .img-container:before,
-a.fancybox-thumb[href$=".png"]:hover .img-container:before {
+a.fancybox-thumb.img-container:hover:before,
+a.fancybox-thumb:hover .img-container:before {
     content: '';
     position: absolute;
     top: 0;
