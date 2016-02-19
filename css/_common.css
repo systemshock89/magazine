@@ -1,4 +1,4 @@
-/*version: 0.1.9*/
+/* version: 1.0.0 */
 /*---------STANDART STYLES------------*/
 html, body {
     width: 100%;
@@ -1688,7 +1688,7 @@ form .status_message {
 
 .faq .faq-container .item {
     position: relative;
-    margin: 0 0 40px 0;
+    margin: 0 0 50px 0;
 }
 
 .faq .faq-container .item .name {
@@ -1703,14 +1703,14 @@ form .status_message {
 }
 
 .faq .faq-container .item .question {
-    margin: 5px 0 10px 0;
-    padding: 20px 40px 20px 40px;
+    margin: 5px 0 20px 0;
+    padding: 15px 20px;
     background: #eee;
     border-radius: 6px;
 }
 
 .faq .faq-container .item .answer {
-    padding: 20px 40px;
+    padding: 15px 20px;
     margin-left: 30px;
     background: #eee;
     border-radius: 6px;
@@ -1736,28 +1736,6 @@ form .status_message {
 .faq.nc-form input[type='text'] {
     width: 350px;
 }
-
-.faq.nc-form input[type='text'].input-captcha {
-    width: 271px;
-}
-
-.faq.nc-form .faq-captcha {
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: 5px;
-}
-
-.faq.nc-form .faq-captcha > div {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.faq-captcha.nc-form > button {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 10px;
-}
-
 /*---------/FAQ------------*/
 
 /*---------PRICE------------*/
