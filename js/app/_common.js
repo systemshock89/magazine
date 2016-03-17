@@ -85,7 +85,9 @@ $(function () {
     try {
         $('.menu-top').eq(0).slicknav({
             label: 'МЕНЮ',
-            prependTo: '.menu-top-container'
+            prependTo: '.menu-top-container',
+            closeOnClick:true,
+            allowParentLinks: true
         });
     } catch (err) {
 
