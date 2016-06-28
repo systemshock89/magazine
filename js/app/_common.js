@@ -30,7 +30,7 @@ $(function () {
                 /* Картинка по дефолту */
                 var cur_img = $(this).find('.img-container img').attr('src');
                 if (cur_img == "")
-                    $(this).find('.img-container img').attr({'src': '/img/empty_icon.png'});
+                    $(this).find('.img-container img').attr({'src': 'img/empty_icon.png'});
                 /* /Картинка по дефолту */
 
 
@@ -103,7 +103,7 @@ $(function () {
 
     /* Стартуем слайдеры */
     if ($(".standart_slider").is(".index_slider2")) {
-        $.getScript('/js/lib/jquery.standart.slider.js', function () {
+        $.getScript('js/lib/jquery.standart.slider.js', function () {
 
             $('.index_slider2').standart_slider({
                 timeout: 12000,
@@ -116,7 +116,7 @@ $(function () {
         });
     }
     if ($(".standart_slider").is(".tovar_slider2")) {
-        $.getScript('/js/lib/jquery.standart.slider.js', function () {
+        $.getScript('js/lib/jquery.standart.slider.js', function () {
 
             $('.tovar_slider2').standart_slider({
                 timeout: 12000,
@@ -462,27 +462,27 @@ $(function () {
 
     /* uniform */
     if ($('input[type=checkbox]')) { //checkbox
-        $('head').append("<link rel='stylesheet' type='text/css'  href='/css/uniform.default.min.css'/>");
-        $('head').append("<link rel='stylesheet' type='text/css'  href='/css/uniform.checkbox.css'/>"); //стили checkbox
-        $.getScript('/js/lib/jquery.uniform.min.js', function () {
+        $('head').append("<link rel='stylesheet' type='text/css'  href='css/uniform.default.min.css'/>");
+        $('head').append("<link rel='stylesheet' type='text/css'  href='css/uniform.checkbox.css'/>"); //стили checkbox
+        $.getScript('js/lib/jquery.uniform.min.js', function () {
 
             $('input[type=checkbox]').uniform();
 
         });
     }
     if ($('input[type=radio]')) { //radio
-//        $('head').append("<link rel='stylesheet' type='text/css'  href='/css/uniform.default.min.css'/>");
-        $('head').append("<link rel='stylesheet' type='text/css'  href='/css/uniform.radio.css'/>"); //стили radio
-        $.getScript('/js/lib/jquery.uniform.min.js', function () {
+//        $('head').append("<link rel='stylesheet' type='text/css'  href='css/uniform.default.min.css'/>");
+        $('head').append("<link rel='stylesheet' type='text/css'  href='css/uniform.radio.css'/>"); //стили radio
+        $.getScript('js/lib/jquery.uniform.min.js', function () {
 
             $('input[type=radio]').uniform();
 
         });
     }
     if ($('select').is('.uniform')) { //select
-//        $('head').append("<link rel='stylesheet' type='text/css'  href='/css/uniform.default.min.css'/>");
-        $('head').append("<link rel='stylesheet' type='text/css'  href='/css/uniform.select.css'/>"); //стили select
-        $.getScript('/js/lib/jquery.uniform.min.js', function () {
+//        $('head').append("<link rel='stylesheet' type='text/css'  href='css/uniform.default.min.css'/>");
+        $('head').append("<link rel='stylesheet' type='text/css'  href='css/uniform.select.css'/>"); //стили select
+        $.getScript('js/lib/jquery.uniform.min.js', function () {
 
             $('select.uniform').uniform();
 
@@ -493,9 +493,9 @@ $(function () {
 
     /* selectik */
     if ($('select').is('.selectik')) {
-        $('head').append("<link rel='stylesheet' type='text/css'  href='/css/selectik.css'/>");
-        $.getScript('/js/lib/jquery.mousewheel.js', function () {
-            $.getScript('/js/lib/jquery.selectik.min.js', function () {
+        $('head').append("<link rel='stylesheet' type='text/css'  href='css/selectik.css'/>");
+        $.getScript('js/lib/jquery.mousewheel.js', function () {
+            $.getScript('js/lib/jquery.selectik.min.js', function () {
 
                 $('select.selectik').selectik({maxItems: 8, minScrollHeight: 20});
 
@@ -511,8 +511,8 @@ $(function () {
      подставить перед document.ready условия, проверяющие, заданы ли параметры слайдера range через php, либо подставляющие дефолтные значения
      ( они здесь находятся внизу файла) */
     if ($('div').is('.slider-range')) {
-        $('head').append("<link rel='stylesheet' type='text/css'  href='/css/jquery-ui.css'/>");
-        $.getScript('/js/lib/jquery-ui.min.js', function () {
+        $('head').append("<link rel='stylesheet' type='text/css'  href='css/jquery-ui.css'/>");
+        $.getScript('js/lib/jquery-ui.min.js', function () {
             var slider_range, input_value_1, input_value_2;
 
             // параметры, задаваемые пользователем в инпутах
@@ -612,8 +612,8 @@ $(function () {
 
     /* scrollbar */
     if ($('div').is('.content-with-scroll')) {
-        $('head').append("<link rel='stylesheet' type='text/css'  href='/css/jquery.scrollbar.css'/>");
-        $.getScript('/js/lib/jquery.scrollbar.min.js', function () {
+        $('head').append("<link rel='stylesheet' type='text/css'  href='css/jquery.scrollbar.css'/>");
+        $.getScript('js/lib/jquery.scrollbar.min.js', function () {
 
             $('.content-with-scroll').scrollbar();
 
@@ -757,7 +757,7 @@ $(function () {
 
      /* jquery.form*/
     if ($(".open-popup").is('div')) {
-        $.getScript('/js/lib/jquery.form.min.js', function () {
+        $.getScript('js/lib/jquery.form.min.js', function () {
         });
     }
     /* jquery.form*/
